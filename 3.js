@@ -1,12 +1,23 @@
-function replace(str)
-{
-    const arr=str.split(" ")
-    arr1=arr.reverse();
-    arr2=arr1.join(" ")
-    console.log(`Original string is ${str} and after \nreplacing first word and second word :${arr2}`)
-    
+function nextIterator(arr) {
+  let count = 0
 
+  function next() {
+    return arr[count++]
+  }
+  
+  // return an object literal with the next method
+  return {
+    next
+  }
 }
-replace("Hii Boy")
-console.log("\n")
-replace("Hii Rukshana")
+
+const array = [1,2,3,4,5,6];
+const iteratorWithNext = nextIterator(array);
+
+
+console.log(iteratorWithNext.next()); 
+console.log(iteratorWithNext.next()); 
+console.log(iteratorWithNext.next());
+console.log(iteratorWithNext.next()); 
+console.log(iteratorWithNext.next()); 
+console.log(iteratorWithNext.next());

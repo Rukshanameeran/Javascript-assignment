@@ -1,20 +1,25 @@
-console.log("Some ways of converting string into array")
+console.log("Function to remove leading and trailing zeros")
 
-let string1="Blockchain Development";
-console.log("1.By split method")
-let arr=string1.split("")
-console.log(arr)
 
-console.log("By split--empty space")
+function removeleading(string)
+{   console.log("Leading zeros")  
+    console.log(" entered input :",string)
+    result=string.replace(/^0+/, "")
+    console.log("After removing leading zeros :",result)
+    // console.log(string.replace(/^0+/, ""));
+}
 
-let arr1=string1.split(" ")
-console.log(arr1)
+function removetrailing(string)
+{
+console.log("Trailing zeros")
+console.log("Original input :",string)
+console.log("After removing Trailing zeros ")
+console.log(string.replace(/\.0+$/, ""));
+}
 
-console.log("2. By Array.from")
-let string2="Rukshana"
-let arr2=Array.from(string2);
-console.log(arr2);
-console.log("3. By Spread operator")
-let string3 = 'rukshana';
-let arr3 = [...string3];
-console.log(arr3); 
+
+removeleading("00402")
+removeleading("0000456")
+console.log("****************************************")
+// removetrailing("230.000")
+// removetrailing("3.04000")

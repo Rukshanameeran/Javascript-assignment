@@ -1,11 +1,17 @@
-function check(text)
+function isValidHexCode(string)
 {
-    if(text.charAt(0)===text.charAt(0).toLowerCase())
-    {
-        console.log(`First character in the string ${text} is lowercase`)
-    }
-    else
-    console.log(`First character in the string ${text} is uppercase`)
+console.log("Entered string :",string)
+exp=/#[\d?a-fA-F]{6}/
+if(string.match(exp))
+{   console.log("Result is True")
+    console.log("Valid hex code") }
+else{ console.log("Result is False")
+    console.log("InValid hex code") }
 }
-check("rukshana")
-check("Rukshana")
+isValidHexCode("#EAECEE")
+console.log("--------------------")
+isValidHexCode("#CD5C5C")
+console.log("--------------------")
+isValidHexCode("#CD5C&C")
+// isValidHexCode("#12ea56")
+// isValidHexCode("#CDcaaC")

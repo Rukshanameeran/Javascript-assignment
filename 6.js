@@ -1,15 +1,14 @@
 
-function charoccur(string)
+function doubleLetters(string)
+{   // \1 — which refers to the first capturing group
+test=/([a-z])\1+/gi
+
+if(string.match(test))
 {
-  let count = 1;
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === string[i + 1]) {
-      count++;
-    } else {
-      console.log(`${string[i]} occur ${count} times`);
-    count = 1;
-    }
-  }
+console.log("Double letters match found in ",string)
 }
- 
-charoccur("heello");
+else
+{console.log("Double letters match not found in ",string) }
+}
+doubleLetters("looop");
+doubleLetters("yummy");

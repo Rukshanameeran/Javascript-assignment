@@ -1,4 +1,13 @@
-let string="This is Blockchain Development program"
-string1=string.replace(/\s/g,'')
-//console.log(string1)
-console.log("Entered string:"+string+" "+"\n"+"After removing whitespace: "+string1)
+console.log("Iterate over all the characters of the word iNeuron")
+let string="iNeuron";
+let itr=string[Symbol.iterator]();
+
+let result=itr.next();
+
+ //while(!result.done)
+//  while(result.done==false)   //it will iterate till done value becomes true
+while(result.done!=true)
+ {
+    console.log(result.value);
+    result=itr.next();
+ }

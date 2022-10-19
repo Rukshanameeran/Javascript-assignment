@@ -1,14 +1,21 @@
-let s="ruksh"
-slen=s.length;
+console.log("Create a function to iterate over the following list")
+function iterator(arr)
+{
 
-if(slen>4)
-{ console.log("Original string is "+s)
-    let slen4=s.slice(0,4)
-    console.log("After truncating the original string :" +slen4)
+//var names=["John","Rohn","Danny","James"];
+//let itr=names[Symbol.iterator]();
+let itr=arr[Symbol.iterator]();
+//console.log(typeof arr[Symbol.iterator]())
+let firstname=itr.next();
+console.log(firstname)
+let secondname=itr.next();
+console.log(secondname)
+let thirdname=itr.next();
+console.log(thirdname)
+let fourthname=itr.next();
+console.log(fourthname)
+
+console.log("Value:",itr.next().value);
+console.log("Done:",itr.next().done);
 }
-else if(slen<=4)
-{    console.log("Original string length is less than or equal to 4")
-    console.log("string is " +s+ " is of length " + slen)
-}
-
-
+iterator(["John","Rohn","Danny","James"]);
