@@ -1,13 +1,13 @@
-console.log("Iterate over all the characters of the word iNeuron")
-let string="iNeuron";
-let itr=string[Symbol.iterator]();
+function rightShift(number,x)
+{
+    a=Math.pow(2 , x)
+    result=Math.floor(number/a)
+    console.log(result)
+}
+const RightShift=(x,y)=>{
+    b = Math.floor(x / Math.pow(2 , y));
+    return b;
+  };
 
-let result=itr.next();
-
- //while(!result.done)
-//  while(result.done==false)   //it will iterate till done value becomes true
-while(result.done!=true)
- {
-    console.log(result.value);
-    result=itr.next();
- }
+rightShift(80,3)        //80 divided by 2^3...80/8---10
+console.log(RightShift(24,2))        

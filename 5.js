@@ -1,25 +1,17 @@
-console.log("Function to remove leading and trailing zeros")
+const changeEnough = (arr, billamount) =>
+ {
+  let quarter = arr[0] * 0.25;
+  let dime = arr[1] * 0.1;
+  let nickel = arr[2] * 0.05;
+  let penny = arr[3] * 0.01;
+  if ((quarter + dime + nickel + penny) >= billamount)
+   {
+    return true;
+  } 
+  else 
+  return false;
+};
 
-
-function removeleading(string)
-{   console.log("Leading zeros")  
-    console.log(" entered input :",string)
-    result=string.replace(/^0+/, "")
-    console.log("After removing leading zeros :",result)
-    // console.log(string.replace(/^0+/, ""));
-}
-
-function removetrailing(string)
-{
-console.log("Trailing zeros")
-console.log("Original input :",string)
-console.log("After removing Trailing zeros ")
-console.log(string.replace(/\.0+$/, ""));
-}
-
-
-removeleading("00402")
-removeleading("0000456")
-console.log("****************************************")
-// removetrailing("230.000")
-// removetrailing("3.04000")
+console.log(changeEnough([2, 100, 0, 0], 14.11));
+console.log(changeEnough([0, 0, 20, 5], 0.75));
+console.log(changeEnough([30, 40, 20, 5], 12.55));

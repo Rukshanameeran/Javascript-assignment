@@ -1,21 +1,27 @@
-console.log("Create a function to iterate over the following list")
-function iterator(arr)
+
+console.log("finding maximum range of a triangle's third edge")
+function nextEdge(s1,s2)
 {
-
-//var names=["John","Rohn","Danny","James"];
-//let itr=names[Symbol.iterator]();
-let itr=arr[Symbol.iterator]();
-//console.log(typeof arr[Symbol.iterator]())
-let firstname=itr.next();
-console.log(firstname)
-let secondname=itr.next();
-console.log(secondname)
-let thirdname=itr.next();
-console.log(thirdname)
-let fourthname=itr.next();
-console.log(fourthname)
-
-console.log("Value:",itr.next().value);
-console.log("Done:",itr.next().done);
+if(s1&& s2<=0){ console.log("The side lengths of the triangle must be of positive integers.") }
+if (s1&& s2>0) 
+    {
+return (s1+s2)-1
+    }
 }
-iterator(["John","Rohn","Danny","James"]);
+
+
+//(side1 + side2) - 1 = maximum range of third edge.
+
+console.log("The value of side3 from nextEdge(8, 10) :",nextEdge(8, 10))
+console.log("The value of side3 from nextEdge(5, 7) :",nextEdge(5, 7))
+console.log("The value of side3 from nextEdge(9, 2) :",nextEdge(9, 2))
+console.log("---------------------------------------------------")
+let max=Math.max(nextEdge(8,10), nextEdge(5,7),nextEdge(9,2));
+
+console.log("the maximum range of a triangle's third edge is :", max)
+
+
+//nextEdge(8, 0); if called then output will be The side lengths of the triangle must be of positive integers.
+
+
+
